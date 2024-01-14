@@ -10,3 +10,4 @@ keymap("v", "kj", "<ESC>", opts)
 -- Better tabbing
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
+

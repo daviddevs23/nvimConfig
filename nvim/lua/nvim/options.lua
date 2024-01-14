@@ -32,3 +32,4 @@ vim.g.log_level = "debug"
 vim.g.presence_log_level = "debug"
 vim.g.mapleader = " "
 vim.opt.completeopt = { "menu", "menuone", "noselect" }
+
