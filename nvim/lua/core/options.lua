@@ -1,3 +1,7 @@
+-- Set space as leader key
+vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
+
 vim.opt.softtabstop = 4
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 0
