@@ -1,5 +1,8 @@
--- Set some default nvim options so I don't tear my hair out
 require('core.options')
 require('core.keymaps')
 require('plugin.plugin')
 require('plugin.plugin_config.theme')
+require('plugin.plugin_config.lsp')
+require('plugin.plugin_config.completion')
+require('plugin.plugin_config.fuzzy')
+require('plugin.plugin_config.format')
