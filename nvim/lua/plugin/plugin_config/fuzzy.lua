@@ -16,8 +16,17 @@ local opts = { noremap = true, silent = true }
 local keymap = vim.keymap.set
 local builtin = require 'telescope.builtin'
 
+local function find_file_from_root()
+    local root = string.gsub(vim.fn.system("git rev-parse --show-toplevel"), "\n", "")
+
+    if vim.v.shell_error == 0 then
+        require("telescope.builtin").find_files({ noremap = true, silent = true, cwd = root })
+    else
+        require("telescope.builtin").find_file()
+    end
+end
+
 -- Open telescope fuzzy finder
-keymap("n", "<leader>ff", builtin.find_files, opts)
+keymap("n", "<leader>ff", find_file_from_root, {})
 keymap("n", "<leader>fh", builtin.help_tags, opts)
-keymap("n", "<leader>fw", builtin.live_grep, opts)
-keymap("n", "<leader>fb", builtin.buffers, opts)
+keymap("n", "<leader>sk", builtin.keymaps, opts)

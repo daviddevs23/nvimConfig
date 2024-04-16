@@ -6,3 +6,5 @@ require('plugin.plugin_config.lsp')
 require('plugin.plugin_config.completion')
 require('plugin.plugin_config.fuzzy')
 require('plugin.plugin_config.format')
+
+print("Add gitsigns, treesitter")
