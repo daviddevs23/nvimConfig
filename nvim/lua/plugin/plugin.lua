@@ -51,5 +51,18 @@ require('lazy').setup({
             { 'nvim-tree/nvim-web-devicons',            enabled = vim.g.have_nerd_font },
         }
     },
-    { 'stevearc/conform.nvim' }
+
+    -- Formatting
+    { 'stevearc/conform.nvim' },
+    {
+        'windwp/nvim-autopairs',
+        event = "InsertEnter",
+        config = true
+    },
+
+    -- Syntax Highlighting
+    { "nvim-treesitter/nvim-treesitter" },
+
+    -- Basic Git integration
+    { "lewis6991/gitsigns.nvim" }
 })
