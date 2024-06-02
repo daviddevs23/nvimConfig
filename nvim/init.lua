@@ -8,5 +8,3 @@ require('plugin.plugin_config.fuzzy')
 require('plugin.plugin_config.format')
 require('plugin.plugin_config.treesitter')
 require('plugin.plugin_config.git')
-
-print("Improve gitsigns, Add CMAKE")

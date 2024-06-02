@@ -3,7 +3,7 @@ local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protoc
 local builtin = require('telescope.builtin')
 
 local map = function(keys, func)
-    vim.keymap.set('n', keys, func, { buffer = event.buf })
+    vim.keymap.set('n', keys, func, { buffer = 0 })
 end
 
 local custom_attach = function()
