@@ -22,7 +22,13 @@ require('lazy').setup({
     { 'neovim/nvim-lspconfig', },
 
     -- Snippets
-    { 'L3MON4D3/LuaSnip' },
+    {
+        'L3MON4D3/LuaSnip',
+        dependencies = {
+            'saadparwaiz1/cmp_luasnip',
+            'rafamadriz/friendly-snippets'
+        }
+    },
 
     -- Completion
     { 'hrsh7th/nvim-cmp' },
@@ -30,7 +36,6 @@ require('lazy').setup({
     { 'hrsh7th/cmp-path' },
     { 'hrsh7th/cmp-buffer' },
     { 'hrsh7th/cmp-emoji' },
-    { 'saadparwaiz1/cmp_luasnip' },
 
     -- Telescope
     {
@@ -64,5 +69,5 @@ require('lazy').setup({
     { "nvim-treesitter/nvim-treesitter" },
 
     -- Basic Git integration
-    { "lewis6991/gitsigns.nvim" }
+    { "lewis6991/gitsigns.nvim" },
 })
