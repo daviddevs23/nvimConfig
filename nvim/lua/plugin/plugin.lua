@@ -70,4 +70,11 @@ require('lazy').setup({
 
     -- Basic Git integration
     { "lewis6991/gitsigns.nvim" },
+
+    -- Establish good habits
+    {
+        "m4xshen/hardtime.nvim",
+        dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
+        opts = {}
+    },
 })
