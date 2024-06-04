@@ -77,4 +77,7 @@ require('lazy').setup({
         dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
         opts = {}
     },
+
+    -- More help with learning navigaton
+    { "tris203/precognition.nvim" },
 })
