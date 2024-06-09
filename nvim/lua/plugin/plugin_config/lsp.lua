@@ -2,6 +2,8 @@
 local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
 local builtin = require('telescope.builtin')
 
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+
 local map = function(keys, func)
     vim.keymap.set('n', keys, func, { buffer = 0 })
 end
@@ -12,10 +14,26 @@ local custom_attach = function()
     map('gr', builtin.lsp_references)
     map('<leader>D', builtin.lsp_type_definitions)
     map('<leader>ws', builtin.lsp_dynamic_workspace_symbols)
-    map('<leader>rn', vim.lsp.buf.rename)
+    map('<leader>rr', vim.lsp.buf.rename)
     map('<leader>ca', vim.lsp.buf.code_action)
     map('K', vim.lsp.buf.hover)
 end
+
+-- CSS
+require 'lspconfig'.cssls.setup {
+    capabilities = capabilities,
+    on_attach = custom_attach,
+}
+
+-- Javascript
+require 'lspconfig'.eslint.setup {
+    capabilities = capabilities,
+}
+
+-- HTML
+require 'lspconfig'.html.setup {
+    capabilities = capabilities,
+}
 
 -- Python
 require("lspconfig").pyright.setup {

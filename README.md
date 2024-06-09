@@ -4,7 +4,6 @@ Super amazing nvim config (hopefully)
 TODO:
 - Add a way to quickly add files
 - Add precognition
-- Create a better setup for Javascript, CSS, and HTML
 - CMAKE integration
 - Better gitsigns integration
 - Add debuggers
@@ -14,3 +13,4 @@ TODO:
 DONE:
 - Add Luasnips
 - Add hardtime
+- Create a better setup for Javascript, CSS, and HTML
