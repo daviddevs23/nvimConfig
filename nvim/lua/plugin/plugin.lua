@@ -78,6 +78,10 @@ require('lazy').setup({
         opts = {}
     },
 
+    -- Terminal
+    {
+        { 'akinsho/toggleterm.nvim', version = "*", config = true }
+    },
     -- More help with learning navigaton
-    { "tris203/precognition.nvim" },
+    -- { "tris203/precognition.nvim" },
 })
