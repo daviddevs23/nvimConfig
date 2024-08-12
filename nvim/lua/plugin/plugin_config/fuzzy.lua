@@ -19,10 +19,10 @@ local builtin = require 'telescope.builtin'
 local function find_file_from_root()
     local root = string.gsub(vim.fn.system("git rev-parse --show-toplevel"), "\n", "")
 
-    if vim.v.shell_error == 0 then
+    if not string.find(root, "fatal") then
         require("telescope.builtin").find_files({ noremap = true, silent = true, cwd = root })
     else
-        require("telescope.builtin").find_file()
+        require("telescope.builtin").find_files()
     end
 end
 
