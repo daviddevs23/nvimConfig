@@ -2,8 +2,6 @@
 Super amazing nvim config (hopefully)
 
 TODO:
-- Go through all native options and set them up
-- Set up keymaps
 - Fuzzy file finding
 - Better config setup, more lazy.nvim friendly
 - Add LSP for C++, Python, Bash, Nix, CSS, HTML, Typescript
@@ -11,7 +9,6 @@ TODO:
 - Add auto formatters
 - Project generators as custom plugin (C++ defaults, etc)
 - Add terminal
-- OS clipboard integration
 - Add a way to quickly add files
 - CMAKE integration
 - Better git integrations
@@ -25,3 +22,8 @@ TODO:
 - Note taking setup and git syncing
 - Set gruvbox theme
 - Create custom status bar
+
+DONE:
+- Go through all native options and set them up
+- Set up keymaps
+- OS clipboard integration
