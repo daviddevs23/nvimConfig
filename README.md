@@ -3,9 +3,8 @@ Super amazing nvim config (hopefully)
 
 TODO:
 - Fuzzy file finding
-- Add LSP for C++, Python, Bash, Nix, CSS, HTML, Typescript
 - Better code action and error reporting
-- Add auto formatters
+- Add auto formatters - maybe
 - Project generators as custom plugin (C++ defaults, etc)
 - Clean up trailing spaces at the end of lines and the file as plugin
 - Add a way to quickly add files
@@ -28,3 +27,5 @@ DONE:
 - Better config setup, more lazy.nvim friendly
 - Set gruvbox theme
 - Add terminal
+- Add LSP for C++, Python, Bash, Nix, CSS, HTML, Typescript
+- Autocompletion
