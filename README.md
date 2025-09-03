@@ -19,6 +19,7 @@ TODO:
 - Add treesitter
 - Note taking setup and git syncing
 - Create custom status bar
+- Add TODO integration
 
 DONE:
 - Go through all native options and set them up
