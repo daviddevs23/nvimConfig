@@ -11,6 +11,9 @@ return {
         opts = function()
             local cmp = require("cmp")
             return {
+                experimental = {
+                    ghost_text = true,
+                },
                 sources = cmp.config.sources({
                     { name = "nvim_lsp" },
                     { name = "luasnip" },

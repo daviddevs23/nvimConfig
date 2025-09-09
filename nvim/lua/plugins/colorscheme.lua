@@ -6,5 +6,9 @@ return {
         config = function()
             vim.cmd.colorscheme 'gruvbox'
         end,
+    },
+    {
+        "j-hui/fidget.nvim",
+        opts = {},
     }
 }

@@ -2,8 +2,7 @@
 Super amazing nvim config (hopefully)
 
 TODO:
-- Fuzzy file finding
-- Better code action and error reporting
+- Auto comment lines of code
 - Add auto formatters - maybe
 - Project generators as custom plugin (C++ defaults, etc)
 - Clean up trailing spaces at the end of lines and the file as plugin
@@ -30,3 +29,5 @@ DONE:
 - Add terminal
 - Add LSP for C++, Python, Bash, Nix, CSS, HTML, Typescript
 - Autocompletion
+- Fuzzy file finding - telescope
+- Better code action and error reporting

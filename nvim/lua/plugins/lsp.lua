@@ -17,43 +17,53 @@ return {
                 map("K", vim.lsp.buf.hover)
             end
 
+            local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
+
             -- C++
             require "lspconfig".clangd.setup {
+                capabilities = capabilities,
                 on_attach = custom_attach,
             }
 
             -- Python
             require "lspconfig".pyright.setup {
+                capabilities = capabilities,
                 on_attach = custom_attach,
             }
 
             -- Bash/Bash
             require "lspconfig".bashls.setup {
+                capabilities = capabilities,
                 on_attach = custom_attach,
             }
 
             -- Nix
             require "lspconfig".nixd.setup {
+                capabilities = capabilities,
                 on_attach = custom_attach,
             }
 
             -- HTML
             require "lspconfig".html.setup {
+                capabilities = capabilities,
                 on_attach = custom_attach,
             }
 
             -- CSS
             require "lspconfig".cssls.setup {
+                capabilities = capabilities,
                 on_attach = custom_attach,
             }
 
             -- Javascript/Typescript
             require "lspconfig".eslint.setup {
+                capabilities = capabilities,
                 on_attach = custom_attach,
             }
 
             -- Lua
             require "lspconfig".lua_ls.setup {
+                capabilities = capabilities,
                 on_attach = custom_attach,
                 on_init = function(client)
                     if client.workspace_folders then
@@ -85,6 +95,21 @@ return {
                 settings = {
                     Lua = {}
                 }
+            }
+        end
+    },
+    {
+        "nvim-treesitter/nvim-treesitter",
+
+        config = function()
+            require("nvim-treesitter.configs").setup {
+                ensure_installed = { "cpp", "c", "go", "bash", "javascript", "typescript", "lua", "rust", "python" },
+                sync_install = false,
+                auto_install = true,
+                highlight = {
+                    enable = true,
+                    additional_vim_regex_highlighting = false,
+                },
             }
         end
     }
