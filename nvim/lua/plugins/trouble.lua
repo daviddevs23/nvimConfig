@@ -1,10 +1,19 @@
 return {
     {
         "folke/trouble.nvim",
+        lazy = false,
         dependencies = {
             "nvim-tree/nvim-web-devicons"
         },
-        opts = {},
+        opts = {
+            modes = {
+                diagnostics = {
+                    auto_close = true,
+                    warn_no_results = false,
+                    open_no_results = false,
+                },
+            },
+        },
         cmd = "Trouble",
         keys = {
             {
