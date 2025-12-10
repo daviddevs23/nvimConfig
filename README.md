@@ -19,6 +19,7 @@ TODO:
 - Note taking setup and git syncing
 - Create custom status bar
 - Add TODO integration
+- Add Code Folding
 
 DONE:
 - Go through all native options and set them up
