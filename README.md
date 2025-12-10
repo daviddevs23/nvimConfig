@@ -3,7 +3,7 @@ Super amazing nvim config (hopefully)
 
 TODO:
 - Auto comment lines of code
-- Add auto formatters - maybe
+- Add auto formatters
 - Project generators as custom plugin (C++ defaults, etc)
 - Clean up trailing spaces at the end of lines and the file as plugin
 - Add a way to quickly add files
@@ -14,12 +14,11 @@ TODO:
 - Add debuggers for above languages
 - Add dadbod and dadbodui
 - Add jumping between buffers (like harpoon with ui to show what is available)
-- Add snippets
-- Add treesitter
 - Note taking setup and git syncing
 - Create custom status bar
 - Add TODO integration
 - Add Code Folding
+- Hex Color
 
 DONE:
 - Go through all native options and set them up
@@ -32,3 +31,6 @@ DONE:
 - Autocompletion
 - Fuzzy file finding - telescope
 - Better code action and error reporting
+- Add snippets
+- Add treesitter
+- Autopair support
