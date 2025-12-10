@@ -20,49 +20,57 @@ return {
             local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
             -- C++
-            require "lspconfig".clangd.setup {
+            vim.lsp.config('clangd', {
                 capabilities = capabilities,
                 on_attach = custom_attach,
-            }
+                init_options = { fallbackFlags = { '--std=c++23' } }
+            })
+            vim.lsp.enable('clangd')
 
             -- Python
-            require "lspconfig".pyright.setup {
+            vim.lsp.config('pyright', {
                 capabilities = capabilities,
                 on_attach = custom_attach,
-            }
+            })
+            vim.lsp.enable('pyright')
 
             -- Bash/Bash
-            require "lspconfig".bashls.setup {
+            vim.lsp.config('bashls', {
                 capabilities = capabilities,
                 on_attach = custom_attach,
-            }
+            })
+            vim.lsp.enable('bashls')
 
             -- Nix
-            require "lspconfig".nixd.setup {
+            vim.lsp.config('nixd', {
                 capabilities = capabilities,
                 on_attach = custom_attach,
-            }
+            })
+            vim.lsp.enable('nixd')
 
             -- HTML
-            require "lspconfig".html.setup {
+            vim.lsp.config('html', {
                 capabilities = capabilities,
                 on_attach = custom_attach,
-            }
+            })
+            vim.lsp.enable('html')
 
             -- CSS
-            require "lspconfig".cssls.setup {
+            vim.lsp.config('cssls', {
                 capabilities = capabilities,
                 on_attach = custom_attach,
-            }
+            })
+            vim.lsp.enable('cssls')
 
             -- Javascript/Typescript
-            require "lspconfig".eslint.setup {
+            vim.lsp.config('eslint', {
                 capabilities = capabilities,
                 on_attach = custom_attach,
-            }
+            })
+            vim.lsp.enable('eslint')
 
             -- Lua
-            require "lspconfig".lua_ls.setup {
+            vim.lsp.config('lua_ls', {
                 capabilities = capabilities,
                 on_attach = custom_attach,
                 on_init = function(client)
@@ -95,7 +103,8 @@ return {
                 settings = {
                     Lua = {}
                 }
-            }
+            })
+            vim.lsp.enable('lua_ls')
         end
     },
     {

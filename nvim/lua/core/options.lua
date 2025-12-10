@@ -14,7 +14,6 @@ vim.opt.splitbelow = true
 vim.opt.splitright = true
 vim.opt.tabstop = 4
 vim.opt.termguicolors = true
-vim.opt.timeoutlen = 500
 vim.opt.undodir = "/home/david/.vim/undodir"
 vim.opt.undofile = true
 vim.log_level = "debug"
