@@ -28,7 +28,7 @@ DONE:
 - Better config setup, more lazy.nvim friendly
 - Set gruvbox theme
 - Add terminal
-- Add LSP for C++, Python, Bash, Nix, CSS, HTML, Typescript
+- Add LSP for C++, Python, Bash, Nix, CSS, HTML, Typescript, Lua
 - Autocompletion
 - Fuzzy file finding - telescope
 - Better code action and error reporting
