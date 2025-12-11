@@ -18,7 +18,6 @@ TODO:
 - Create custom status bar
 - Add TODO integration
 - Add Code Folding
-- Hex Color
 
 DONE:
 - Go through all native options and set them up
@@ -34,3 +33,4 @@ DONE:
 - Add snippets
 - Add treesitter
 - Autopair support
+- Hex Color
