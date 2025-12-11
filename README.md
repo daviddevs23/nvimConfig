@@ -15,7 +15,6 @@ TODO:
 - Add dadbod and dadbodui
 - Add jumping between buffers (like harpoon with ui to show what is available)
 - Note taking setup and git syncing
-- Create custom status bar
 - Add TODO integration
 - Add Code Folding
 
@@ -34,3 +33,4 @@ DONE:
 - Add treesitter
 - Autopair support
 - Hex Color
+- Create custom status bar
