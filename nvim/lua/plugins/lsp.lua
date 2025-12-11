@@ -69,6 +69,13 @@ return {
             })
             vim.lsp.enable('eslint')
 
+            -- Cmake
+            vim.lsp.config('cmake', {
+                capabilities = capabilities,
+                on_attach = custom_attach,
+            })
+            vim.lsp.enable('cmake')
+
             -- Lua
             vim.lsp.config('lua_ls', {
                 capabilities = capabilities,

@@ -8,12 +8,8 @@ TODO:
 - Clean up trailing spaces at the end of lines and the file as plugin
 - Add a way to quickly add files
 - CMAKE integration
-- Better git integrations
-    - See change markers
-    - Commit, Add, etc in neovim
 - Add debuggers for above languages
-- Add dadbod and dadbodui
-- Add jumping between buffers (like harpoon with ui to show what is available)
+- Add harpoon 2
 - Note taking setup and git syncing
 - Add TODO integration
 - Add Code Folding
@@ -34,3 +30,4 @@ DONE:
 - Autopair support
 - Hex Color
 - Create custom status bar
+- See git change markers
