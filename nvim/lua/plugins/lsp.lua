@@ -23,7 +23,6 @@ return {
             vim.lsp.config('clangd', {
                 capabilities = capabilities,
                 on_attach = custom_attach,
-                init_options = { fallbackFlags = { '--std=c++23' } },
             })
             vim.lsp.enable('clangd')
 
