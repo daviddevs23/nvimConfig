@@ -3,11 +3,11 @@ local opts = { noremap = true, silent = true }
 local keymap = vim.api.nvim_set_keymap
 
 -- Easier escaping
-keymap("i", "jk", "<ESC>", opts)
-keymap("i", "kj", "<ESC>", opts)
-keymap("v", "hj", "<ESC>", opts)
-keymap("v", "jh", "<ESC>", opts)
-
+-- keymap("i", "jk", "<ESC>", opts)
+-- keymap("i", "kj", "<ESC>", opts)
+-- keymap("v", "hj", "<ESC>", opts)
+-- keymap("v", "jh", "<ESC>", opts)
+--
 -- Better tabbing
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
