@@ -1,6 +1,6 @@
 vim.opt.background = "dark"
 vim.opt.clipboard = "unnamedplus"
-vim.opt.colorcolumn = "80"
+vim.opt.colorcolumn = "100"
 vim.opt.expandtab = true
 vim.opt.hlsearch = false
 vim.opt.mouse = ""
@@ -12,7 +12,7 @@ vim.opt.signcolumn = "yes"
 vim.opt.smartindent = true
 vim.opt.splitbelow = true
 vim.opt.splitright = true
-vim.opt.tabstop = 4
+vim.opt.tabstop = 2
 vim.opt.termguicolors = true
 vim.opt.undodir = "/home/david/.vim/undodir"
 vim.opt.undofile = true
