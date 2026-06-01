@@ -1,11 +1,103 @@
 return {
-    {
-        'neovim/nvim-lspconfig',
-        config = function()
-            local map = function(keys, func)
-                vim.keymap.set('n', keys, func, { buffer = 0 })
-            end
+  {
+    'neovim/nvim-lspconfig',
+    config = function()
+      local map = function(keys, func)
+        vim.keymap.set('n', keys, func, { buffer = 0 })
+      end
 
+      local custom_attach = function()
+        map("<leader>rr", vim.lsp.buf.rename)
+        map("<leader>ca", vim.lsp.buf.code_action)
+        map("gd", vim.lsp.buf.definition)
+        map("gtd", vim.lsp.buf.type_definition)
+        map("gr", vim.lsp.buf.references)
+        map("gds", vim.lsp.buf.document_symbol)
+        map("gp", vim.lsp.buf.format)
+        map("K", vim.lsp.buf.hover)
+      end
+
+      local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
+
+      -- C++
+      vim.lsp.config('clangd', {
+        cmd = {
+          "clangd",
+          "--background-index",
+          "--clang-tidy",
+          "--completion-style=detailed",
+          "--header-insertion=never",
+        },
+        capabilities = capabilities,
+        on_attach = custom_attach,
+      })
+      vim.lsp.enable('clangd')
+
+      -- Python
+      vim.lsp.config('pyright', {
+        capabilities = capabilities,
+        on_attach = custom_attach,
+      })
+      vim.lsp.enable('pyright')
+
+      -- Bash/Bash
+      vim.lsp.config('bashls', {
+        capabilities = capabilities,
+        on_attach = custom_attach,
+      })
+      vim.lsp.enable('bashls')
+
+      -- Nix
+      vim.lsp.config('nixd', {
+        capabilities = capabilities,
+        on_attach = custom_attach,
+      })
+      vim.lsp.enable('nixd')
+
+      -- HTML
+      vim.lsp.config('html', {
+        capabilities = capabilities,
+        on_attach = custom_attach,
+      })
+      vim.lsp.enable('html')
+
+      -- CSS
+      vim.lsp.config('cssls', {
+        capabilities = capabilities,
+        on_attach = custom_attach,
+      })
+      vim.lsp.enable('cssls')
+
+      -- Javascript/Typescript
+      vim.lsp.config('eslint', {
+        capabilities = capabilities,
+        on_attach = custom_attach,
+      })
+      vim.lsp.enable('eslint')
+
+      -- Cmake
+      vim.lsp.config('cmake', {
+        capabilities = capabilities,
+        on_attach = custom_attach,
+      })
+      vim.lsp.enable('cmake')
+
+      -- Lua
+      vim.lsp.config('lua_ls', {
+        capabilities = capabilities,
+        on_attach = custom_attach,
+        on_init = function(client)
+          if client.workspace_folders then
+            local path = client.workspace_folders[1].name
+            if
+                path ~= vim.fn.stdpath('config')
+                and (vim.uv.fs_stat(path .. '/.luarc.json') or vim.uv.fs_stat(path .. '/.luarc.jsonc'))
+            then
+              return
+            end
+          end
+
+<<<<<<< HEAD
             local custom_attach = function()
                 map("<leader>rr", vim.lsp.buf.rename)
                 map("<leader>ca", vim.lsp.buf.code_action)
